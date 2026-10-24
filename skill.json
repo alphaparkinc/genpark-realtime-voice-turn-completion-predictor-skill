@@ -1,0 +1,37 @@
+{
+  "name": "genpark-realtime-voice-turn-completion-predictor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time conversational End-of-Utterance (EoU) turn completion predictor harmonizing syntactic clause completeness and acoustic silence thresholds.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "voice-ai",
+  "tags": [
+    "turn-completion",
+    "end-of-utterance",
+    "voice-agents",
+    "webrtc-speech",
+    "conversational-flow"
+  ],
+  "inputs": {
+    "partial_transcript": {
+      "type": "string"
+    },
+    "trailing_silence_ms": {
+      "type": "integer",
+      "default": 350
+    }
+  },
+  "outputs": {
+    "prediction_id": {
+      "type": "string"
+    },
+    "turn_completed_verdict": {
+      "type": "boolean"
+    },
+    "recommended_agent_action": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
